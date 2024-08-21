@@ -20,7 +20,49 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         useMaterial3: true,
       ),
-      home: const ListViewBuilderWidget(),
+      home: const GridViewWidget(),
+    );
+  }
+}
+
+class GridViewWidget extends StatelessWidget {
+  const GridViewWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3, //mau berapa kolom
+          crossAxisSpacing: 19, //jarak antar kolom
+          mainAxisSpacing: 19, //jarak antar baris
+          childAspectRatio: 2/2, //rasio antara lebar dan tinggi
+           ),
+           children: [
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.green,
+            )
+           ] 
+           ),
+           
     );
   }
 }
